@@ -1,12 +1,12 @@
 var Discord = require("discord.js");
-var prefix = "t!";
+var prefix = "f!";
 var client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("ready to rumble!");
 });
 
-var bannedwords = "fuck,shit,slut,whore".split(",");
+var bannedwords = "nigger".split(",");
 
 client.on("message", msg => {
   if (msg.guild === null) return;
@@ -14,7 +14,7 @@ client.on("message", msg => {
   for (i=0;i<bannedwords.length;i++) {
     if (msg.content.toLowerCase().includes(bannedwords[i])) {
       msg.delete();
-      msg.reply("Please don't swear!");
+      msg.reply("!");
       return;
     }
   }
@@ -79,4 +79,4 @@ client.on("message", msg => {
   }
 });
 
-client.login(Your token here!);
+client.login(NzEzNzg5NzIwNDYyNjIyNzIw.XslO2g.i_dF1iZBUGOTyY98DloIbLTkwys);
